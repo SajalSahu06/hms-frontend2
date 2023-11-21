@@ -24,9 +24,31 @@ function HeaderNew() {
         <header>
             <nav class="navbar navbar-expand-lg">
                 <div class="container">
-
-                    <a class="navbar-brand text-white" href="#"><img src={logoheader} alt="img" style={{ width: "60px" }} /><i class="fa fa-graduation-cap fa-lg mr-2"></i>MEDIXO E-HEALTH</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nvbCollapse" aria-controls="nvbCollapse">
+                    <a class="navbar-brand text-white" href="#">
+                      <img src={logoheader} alt="img" style={{ width: "60px", padding: "9px" }} />
+                      <span
+                             style={{
+                                display: "inline-block",
+                                transition: "transform 0.3s ease-in-out, margin-left 0.3s ease-in-out, box-shadow 0.3s ease-in-out, text-shadow 0.3s ease-in-out", // Adjust the duration as needed
+                                
+                            }}
+                            onMouseEnter={(e) => {
+                                e.target.style.transform = "scale(1.5)";
+                                e.target.style.marginLeft = "5px"; // Adjust the distance as needed
+                                e.target.style.textShadow = "0 0 15px #FFD700, 0 0 15px #FFD700, 0 0 15px #FFD700"; // Apply glow on hover
+                            }}
+                            onMouseLeave={(e) => {
+                                e.target.style.transform = "scale(1)";
+                                e.target.style.marginLeft = "0";
+                                e.target.style.textShadow = "none"; 
+                            }}
+                        >
+                            <i className="fa fa-graduation-cap fa-lg mr-2"></i>
+                            MediPrisc
+                        </span>
+                      </a>
+                        
+                           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nvbCollapse" aria-controls="nvbCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="nvbCollapse">
@@ -60,14 +82,12 @@ function HeaderNew() {
                                                 <a class="dropdown-item" href="/add">Inquiry </a>
                                                 <a class="dropdown-item" href="/addpriscription">Buy Medicine</a>
                                                 <a class="dropdown-item" href="/videoconsultant">Video Consultant</a>
-                                                <a class="dropdown-item" href="/saerchOrder">Saerch Order</a>
+                                                <a class="dropdown-item" href="/saerchOrder">Search Order</a>
                                                 <a class="dropdown-item" href="/paymentportal">Payment</a>
                                             </div>
                                         </div>
                                     </li> </> : null}
-                            <li class="nav-item pl-1">
-                                <a class="nav-link" href="#"><i class="fa fa-phone fa-fw fa-rotate-180 mr-1"></i>Contact Us</a>
-                            </li>
+
                             <li class="nav-item pl-1">
                                 {localStorage.getItem("user") ?
                                     <div class="dropdown">

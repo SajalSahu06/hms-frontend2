@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import docAppoinmentpgBackA from "../siteImages/docAppoinmentpgBackA.jpg";
 import labAppoinmentpgBackA from "../siteImages/labtestpgBackA.jpg";
 import appoinmentAdminpgBack from "../siteImages/appoinmentAdminPageBack.jpg";
-export default function AppoinementsAdmin() {
+export default function AppoinmntsAdmin() {
 
     const navigate = useNavigate();
 

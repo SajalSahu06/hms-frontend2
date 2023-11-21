@@ -396,8 +396,34 @@ export default function AddPatient() {
                                                     </div>
 
                                                     <br /><div className="row d-flex justify-content-center">
-                                                        <button type="submit" class="btn text-white mt-2 mr-5" style={{ background: "#0297BF", width: "100px" }} onClick={submit}>Register</button><br />
-                                                        <button type="button" class="btn text-white mt-2" style={{ background: "#E53D3D", width: "100px" }} onClick={() => navigate(-1)}>Cancel</button>
+                                                    <button
+  type="submit"
+  class="btn text-white mt-2 mr-5"
+  style={{
+    background: "green",
+    width: "100px",
+    transition: "transform 0.3s ease",
+  }}
+  onClick={submit}
+  onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
+  onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
+>
+  Register
+</button><br />
+                                                        <button
+  type="button"
+  class="btn text-white mt-2"
+  style={{
+    background: "#E53D3D",
+    width: "100px",
+    transition: "transform 0.3s ease",
+  }}
+  onClick={() => navigate(-1)}
+  onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
+  onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
+>
+  Cancel
+</button>
                                                     </div>
 
                                                 </div>

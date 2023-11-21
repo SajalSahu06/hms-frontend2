@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import docAppImg from "../siteImages/docAppoinment.png"
 import labAppImg from "../siteImages/labAppoinment.png"
 
-export default function Appoinements() {
+export default function Appoinments() {
     const navigate = useNavigate();
 
     const [nic, setNic] = useState("");

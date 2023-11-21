@@ -1,14 +1,12 @@
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import loginedited from "../patientImages/loginedited.jpeg";
+import loginedited from "../patientImages/loginedited.jpg";
 import { useEffect } from "react";
 
 export default function Login() {
@@ -26,15 +24,12 @@ export default function Login() {
             password: data.get("password"),
         }).then(function (res) {
             if (res.status === 200) {
-                //alert("Success!!");
                 localStorage.setItem('role', res.data.role);
                 localStorage.setItem('user', JSON.stringify(res.data.user));
                 window.location.href = '/';
             } else {
                 alert(res.data.message);
             }
-            console.log(res);
-            // navigate("/readMedicine"); // navigate to medicine page after successful addition of medicine
         })
             .catch(function (err) {
                 alert(err.response.data.message);
@@ -51,79 +46,83 @@ export default function Login() {
 
     return (
         <div style={{
-
             backgroundImage: `url(${loginedited})`,
             backgroundRepeat: 'no-repeat',
             minHeight: '100vh',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             maxWidth: '100%',
-            //opacity: '5.0'
-        }}><br></br><br></br><br></br><br></br>
-            <Container component="main" maxWidth="xs">
-
-                <Box
-                    sx={{
-                        paddingTop: 0,
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                    }}
-                >
-                    <Typography component="h1" variant="h5">
-                        Sign in
-                    </Typography>
-                    <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-                        <TextField
-                            margin="normal"
-                            required
-                            fullWidth
-                            id="email"
-                            label="Email Address"
-                            name="email"
-                            autoComplete="email"
-                            autoFocus
-                        />
-                        <TextField
-                            margin="normal"
-                            required
-                            fullWidth
-                            name="password"
-                            label="Password"
-                            type="password"
-                            id="password"
-                            autoComplete="current-password"
-                        />
-                        {/* <FormControlLabel
-                        control={<Checkbox value="remember" color="primary" />}
-                        label="Remember me"
-                    /> */}
-                        <Button
-                            type="submit"
-                            fullWidth
-                            variant="contained"
-                            sx={{ mt: 3, mb: 2 }}
-                        >
-                            Sign In
-                        </Button>
-                        <Grid container>
-                            {/* <Grid item xs>
-                            <Link href="#" variant="body2">
-                                Forgot password?
-                            </Link>
-                        </Grid> */}
-                            <Grid item>
-                                <Link to="/register" variant="body2">
-                                    {"Don't have an account? Sign Up"}
-                                </Link><br></br>
-                                <Link to="/doctorLogin" variant="body2">
-                                    {"Doctor Loging"}
-                                </Link>
+        }}>
+             <div style={{
+                position:"absolute",
+                left: "600px",
+                top:"200px",
+                backdropFilter: "blur(10px)",
+                paddingTop: "20px",  // Add padding to move the form down
+                margin: "auto",
+                maxWidth: "500px",
+                backgroundColor: "rgba(255, 255, 255, 0.1)",
+                border: "2px solid #fff",
+                borderRadius: "8px",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+    }}>
+                <Container component="main" maxWidth="xs">
+                    <Box
+                        sx={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                        }}
+                    >
+                        <Typography component="h1" variant="h5">
+                            Sign in
+                        </Typography>
+                        <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+                            <TextField
+                                margin="normal"
+                                required
+                                fullWidth
+                                id="email"
+                                label="Email Address"
+                                name="email"
+                                autoComplete="email"
+                                autoFocus
+                            />
+                            <TextField
+                                margin="normal"
+                                required
+                                fullWidth
+                                name="password"
+                                label="Password"
+                                type="password"
+                                id="password"
+                                autoComplete="current-password"
+                            />
+                            <Button
+                                type="submit"
+                                fullWidth
+                                variant="contained"
+                                sx={{ mt: 3, mb: 2 }}
+                            >
+                                Sign In
+                            </Button>
+                            <Grid container>
+                                <Grid item>
+                                    <Link to="/register" variant="body2" style={{ margin: "0 70px", color: "yellow" }}>
+                                        {"Don't have an account? Sign Up"}
+                                    </Link>
+                                    <br />
+                                    <Link to="/doctorLogin" variant="body2" style={{ color: "yellow" }}>
+                                        {"Doctor Login"}
+                                    </Link>
+                                </Grid>
                             </Grid>
-                        </Grid>
+                        </Box>
                     </Box>
-                </Box>
-            </Container>
+                </Container>
+            </div>
         </div>
     );
 }

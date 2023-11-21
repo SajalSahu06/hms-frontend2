@@ -86,8 +86,8 @@ export default function UpdatePatient() {
                                             {/*<td className="col-md-6"><img className="logo" src="reportImages/logo.jpeg"></img></td>*/}
                                             <td className="col-md-6 text-white">
                                                 <h5><b className="title">MEDIXO E- HEALTH CARE CENTER (PVT) LTD</b></h5>
-                                                <h6><b className="subtitle">No. 149, Galle Road, Colombo 3, Sri Lanka</b></h6>
-                                                <h6><b className="subtitle">Tel.0347 99 99 99</b></h6>
+                                                <h6><b className="subtitle">near sneh nagar,Nagpur,India</b></h6>
+                                                <h6><b className="subtitle">Tel.9502347589</b></h6>
                                                 <center><div><ul><b className="subtitle1"><h3>Patient Profile</h3></b></ul></div></center></td>
 
                                         </tr>

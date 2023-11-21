@@ -1,28 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
-import Home from "../siteImages/Home.jpeg"
+import wall2 from "../siteImages/wall2.jpg";
+import wall4 from "../siteImages/wall4.jpg";
+import img1 from "../siteImages/img1.png";
+import img2 from "../siteImages/img2.png";
 
 function HeaderNew() {
+    const [showDropdown, setShowDropdown] = useState(false);
+
+    const toggleDropdown = () => {
+        setShowDropdown(!showDropdown);
+    };
+
     return (
-        <header>
-            <div class="owl-carousel owl-theme">
-                <div class="item">
-                    <img src={Home} alt="" />
-                    <div class="cover">
-                        <div class="container">
-                            <div class="header-content">
-                                <div class="line"></div>
-                                <h2>Get Your Health Checked with</h2>
-                                <h1>Our Best Staff & Modern Facilities</h1>
-                                <h4>With 24/7 premium affection and caring services for affordable prices</h4>
+       
+            <header>
+                <div className="owl-carousel owl-theme">
+                    <div className="item">
+                        <img src={wall2} alt="" />
+                        <div className="cover">
+                            <div className="container">
+                                <div className="dropdown">
+                                  
+                                  
+                                </div>
+                                <div className="header-content">
+                                    <div className="line"></div>
+                                    <h2>Experience Top-Tier Health Services 🏥</h2>
+                                    <h1>From Our Exceptional Team and State-of-the-Art Facilities 🌟</h1>
+                                    <h4>24/7 Care, Unrivaled Affection, and Affordable Rates 💖🌼</h4>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div className="item">
+                        <img src={wall4} alt="" />
+                        </div>
                 </div>
+                 
+            </header>
 
-            </div>
-        </header>
-    )
+           
+       
+    );
 }
 
 export default HeaderNew;
