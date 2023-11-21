@@ -31,7 +31,7 @@ export default function UpdatePatient() {
     useEffect(function () {
 
         function getPatients() {
-            axios.get("http://localhost:8050/patient/get/" + id).then((res) => {
+            axios.get("https://backend-of-hms.onrender.com/patient/get/" + id).then((res) => {
 
                 setName(res.data.name)
                 setNic(res.data.nic)

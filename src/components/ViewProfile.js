@@ -31,7 +31,7 @@ export default function UpdatePatient() {
     useEffect(function () {
 
         function getPatients() {
-            axios.get("http://localhost:8050/patient/get/" + id).then((res) => {
+            axios.get("https://backend-of-hms.onrender.com/patient/get/" + id).then((res) => {
 
                 setName(res.data.name)
                 setNic(res.data.nic)
@@ -107,7 +107,7 @@ export default function UpdatePatient() {
 
                                                     </tr>
 
-                                                    <center><img height={"200px"} width={"200px"} src={`http://localhost:8050/ProfilePic/${profilePic}`} style={{ borderRadius: "200px" }} /></center><br></br><br></br>
+                                                    <center><img height={"200px"} width={"200px"} src={`https://backend-of-hms.onrender.com/ProfilePic/${profilePic}`} style={{ borderRadius: "200px" }} /></center><br></br><br></br>
                                                     <tr >
 
                                                         <td className="col-md-7"><b className="text">Name:&nbsp;&nbsp;&nbsp;{name}</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b className="text2"></b></td>

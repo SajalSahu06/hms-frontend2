@@ -37,7 +37,7 @@ export default function PrintDoAppoinmentResipt() {
     useEffect(function () {
 
         function getAppoinment() {
-            axios.get("http://localhost:8050/appoinment/getoneAppoinment/" + id).then((res) => {
+            axios.get("https://backend-of-hms.onrender.com/appoinment/getoneAppoinment/" + id).then((res) => {
 
                 setDoctorCategory(res.data.specialization);
                 setDoctorName(res.data.doctor_name);

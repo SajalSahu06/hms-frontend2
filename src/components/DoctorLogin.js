@@ -15,7 +15,7 @@ export default function DoctorLogin() {
 
 
         function getDoctorName() {
-            axios.get("http://localhost:8050/doctor/readDoctor").then(function (res) {
+            axios.get("https://backend-of-hms.onrender.com/doctor/readdoctor").then(function (res) {
 
                 console.log(res.data);
 

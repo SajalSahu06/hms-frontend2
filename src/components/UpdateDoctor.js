@@ -35,7 +35,7 @@ export default function UpdateDoctor() {
     useEffect(function () {
 
         function getDoctor() {
-            axios.get("http://localhost:8050/doctor/get/" + id).then((res) => {
+            axios.get("https://backend-of-hms.onrender.com/doctor/get/" + id).then((res) => {
 
                 setfirstname(res.data.firstname);
                 setlastname(res.data.lastname);
@@ -102,7 +102,7 @@ export default function UpdateDoctor() {
         }
         console.log(updateDoctor);
 
-        axios.put("http://localhost:8050/doctor/update/" + id, updateDoctor).then(function () {
+        axios.put("https://backend-of-hms.onrender.com/doctor/update/" + id, updateDoctor).then(function () {
 
             alert("Status Updated");
             navigate("/readDoctors");

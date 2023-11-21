@@ -6,7 +6,7 @@ export default function AllCustomers() {
 
     useEffect(() => {
         function getCustomers() {
-            axios.get("http://localhost:8050/Customer/").then((res) => {
+            axios.get("https://backend-of-hms.onrender.com/Customer/").then((res) => {
                 setCustomers(res.data);
             }).catch((err) => {
                 alert(err.message);

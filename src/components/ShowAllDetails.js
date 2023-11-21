@@ -14,7 +14,7 @@ export default function AllVideos() {
     useEffect(() => {
         function getVideo() {
             axios
-                .get('http://localhost:8050/customer/')
+                .get('https://backend-of-hms.onrender.com/customer/')
                 .then((res) => {
 
                     console.log(res.data);
@@ -30,7 +30,7 @@ export default function AllVideos() {
 
     const deleteVideo = async (id) => {
         try {
-            await axios.delete(`http://localhost:8050/customer/delete/${id}`);
+            await axios.delete(`https://backend-of-hms.onrender.com/customer/delete/${id}`);
             setVideos(videos.filter((item) => item.id !== id));
             // alert('Data deleted successfully');
             window.location.reload(); //data deleted after that page will refresh automatically

@@ -32,7 +32,7 @@ export default function UpdateBloodReport() {
 
     useEffect(() => {
         function getBloodReports() {
-            axios.get("http://localhost:8050/bloodreport/getBlood/" + id).then((res) => {
+            axios.get("https://backend-of-hms.onrender.com/bloodreport/getBlood/" + id).then((res) => {
                 console.log(res.data);
                 setId(res.data.ID)
                 setName(res.data.name)
@@ -90,7 +90,7 @@ export default function UpdateBloodReport() {
         console.log(UpdateBloodReport)
 
 
-        axios.put("http://localhost:8050/bloodreport/updateBlood/" + id, UpdateBloodReport).then(function () {
+        axios.put("https://backend-of-hms.onrender.com/bloodreport/updateBlood/" + id, UpdateBloodReport).then(function () {
             alert("Blood Report details Updated")
             window.location = "/blood";
         }).catch((err) => {

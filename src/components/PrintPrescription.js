@@ -37,7 +37,7 @@ export default function PrintDoAppoinmentResipt() {
     useEffect(function () {
 
         function getLabAppoinment() {
-            axios.get("http://localhost:8050/pha/getonePharmacy/" + id).then((res) => {
+            axios.get("https://backend-of-hms.onrender.com/pha/getonePharmacy/" + id).then((res) => {
 
                 setOrderID(res.data.orderID);
                 setTitle(res.data.title);
@@ -178,7 +178,7 @@ export default function PrintDoAppoinmentResipt() {
                                     height={"900px"}
                                     alt="Snow"
                                     width={"900px"}
-                                    src={`http://localhost:8050/Prescriptions/${file_path}`}
+                                    src={`https://backend-of-hms.onrender.com/Prescriptions/${file_path}`}
                                     style={{ cursor: 'pointer' }}
                                 /></h4>
                             </div>

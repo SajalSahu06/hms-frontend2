@@ -27,7 +27,7 @@ export default function AddTotal() {
         formData.append("totalFee", totalFee);
 
 
-        axios.post("http://localhost:8050/upd/add", formData).then(function () {
+        axios.post("https://backend-of-hms.onrender.com/upd/add", formData).then(function () {
             alert("Success!!");
             navigate("/readMedicine"); // navigate to medicine page after successful addition of medicine
             

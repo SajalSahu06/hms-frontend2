@@ -29,7 +29,7 @@ export default function AddCustomer() {
                 message
             }
 
-            axios.post("http://localhost:8050/Customer/add", newCustomer).then(() => {
+            axios.post("https://backend-of-hms.onrender.com/Customer/add", newCustomer).then(() => {
                 //alert("Customer added")
                 successModel()
 

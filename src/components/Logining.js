@@ -11,7 +11,7 @@ function Login() {
         e.preventDefault()
 
         try{
-            await axios.post("http://localhost:8050/patient/",{email,password})
+            await axios.post("https://backend-of-hms.onrender.com/patient/",{email,password})
 
         }catch(e){
             console.log(e);

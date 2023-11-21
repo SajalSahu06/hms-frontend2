@@ -55,7 +55,7 @@ export default function ReportDetails() {
     useEffect(function () {
 
         function getBloodReports() {
-            axios.get("http://localhost:8050/bloodreport/blood").then((res) => {
+            axios.get("https://backend-of-hms.onrender.com/bloodreport/blood").then((res) => {
                 console.log(res.data);
                 setBloodReports(res.data)
             }).catch((err) => {
@@ -77,7 +77,7 @@ export default function ReportDetails() {
     useEffect(function () {
 
         function getReports() {
-            axios.get("http://localhost:8050/report/").then((res) => {
+            axios.get("https://backend-of-hms.onrender.com/report/").then((res) => {
                 console.log(res.data);
                 setReports(res.data)
             }).catch((err) => {
@@ -462,7 +462,7 @@ export default function ReportDetails() {
                                             </table>
 
                                             <b>Report Details :</b> <br></br>
-                                            <center><img height={"300px"} width={"500px"} src={`http://localhost:8050/images/${rep.filepath}`} /></center><br></br><br></br>
+                                            <center><img height={"300px"} width={"500px"} src={`https://backend-of-hms.onrender.com/images/${rep.filepath}`} /></center><br></br><br></br>
                                             {/*Re8port Details : <img src={`iamges/${dns.filepath}`} /><br></br>*/}
                                             <b>Comment :</b> {rep.status}<br></br><br></br>
 

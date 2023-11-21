@@ -26,7 +26,7 @@ export default function VideoAppointment() {
             };
 
             axios
-                .post('http://localhost:8050/vconsult/vidappointment', newCustomer)
+                .post('https://backend-of-hms.onrender.com/vconsult/vidappointment', newCustomer)
                 .then(() => {
                     alert('Customer added');
                     navigate("/");

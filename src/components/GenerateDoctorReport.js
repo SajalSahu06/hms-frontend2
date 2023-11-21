@@ -28,7 +28,7 @@ export default function PrintDoAppoinmentResipt() {
     useEffect(function () {
 
         function getAppoinment() {
-            axios.get("http://localhost:8050/appoinment/readAppoinment").then(function (res) {
+            axios.get("https://backend-of-hms.onrender.com/appoinment/readAppoinment").then(function (res) {
 
                 console.log(res.data);
                 setAppoinments(res.data);

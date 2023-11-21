@@ -25,7 +25,7 @@ export default function AllPatientsRead() {
 
 
         function getPatients() {
-            axios.get("http://localhost:8050/patient/").then(function (res) {
+            axios.get("https://backend-of-hms.onrender.com/patient/").then(function (res) {
 
                 console.log(res.data);
 
@@ -180,7 +180,7 @@ export default function AllPatientsRead() {
                             <tr>
                                 <td>
                                     <img
-                                        src={`http://localhost:8050/ProfilePic/${patients.profilePic}`}
+                                        src={`https://backend-of-hms.onrender.com/ProfilePic/${patients.profilePic}`}
                                         id="myImg"
                                         height={"50px"}
                                         alt="Profile Picture"

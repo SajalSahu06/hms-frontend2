@@ -22,7 +22,7 @@ export default function GenerateReports() {
 
 
         function getDoctorName() {
-            axios.get("http://localhost:8050/doctor/readDoctor").then(function (res) {
+            axios.get("https://backend-of-hms.onrender.com/doctor/readDoctor").then(function (res) {
 
                 console.log(res.data);
 

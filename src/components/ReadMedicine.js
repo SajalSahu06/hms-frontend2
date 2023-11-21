@@ -31,7 +31,7 @@ export default function ReadMedicine() {
     useEffect(function () {
 
         function getreadMedicine() {
-            axios.get("http://localhost:8050/med/").then(function (res) {
+            axios.get("https://backend-of-hms.onrender.com/med/").then(function (res) {
 
                 console.log(res.data);
 
@@ -68,7 +68,7 @@ export default function ReadMedicine() {
         };
 
         axios
-            .put("http://localhost:8050/med/update/" + med._id, updateMedicine)
+            .put("https://backend-of-hms.onrender.com/med/update/" + med._id, updateMedicine)
             .then(() => {
                 setreadMedicine((prevMedicine) =>
                     prevMedicine.map((item) => {
@@ -103,7 +103,7 @@ export default function ReadMedicine() {
         const updatedQty = ++med.qty; // Increment the existing value by 1
 
         axios
-            .put("http://localhost:8050/med/update/" + med._id, { qty: updatedQty })
+            .put("https://backend-of-hms.onrender.com/med/update/" + med._id, { qty: updatedQty })
             .then(() => {
                 setreadMedicine((prevMedicine) =>
                     prevMedicine.map((item) => {

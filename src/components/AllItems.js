@@ -25,7 +25,7 @@ export default function AllItems() {
 
     useEffect(() => {
         function getItems() {
-            axios.get("http://localhost:8050/labitemsinventory/item").then((res) => {
+            axios.get("https://backend-of-hms.onrender.com/labitemsinventory/item").then((res) => {
                 console.log(res.data);
                 setItems(res.data)
             }).catch((err) => {
@@ -46,7 +46,7 @@ export default function AllItems() {
         };
 
         axios
-            .put("http://localhost:8050/labitemsinventory/updateItem/" + item._id, updateItem)
+            .put("https://backend-of-hms.onrender.com/labitemsinventory/updateItem/" + item._id, updateItem)
             .then(() => {
                 setreadItem((prevMedicine) =>
                     prevMedicine.map((item) => {
@@ -86,7 +86,7 @@ export default function AllItems() {
         };
 
         axios
-            .put("http://localhost:8050/labitemsinventory/updateItem/" + item._id, updateItem)
+            .put("https://backend-of-hms.onrender.com/labitemsinventory/updateItem/" + item._id, updateItem)
             .then(() => {
                 setreadItem((prevMedicine) =>
                     prevMedicine.map((item) => {

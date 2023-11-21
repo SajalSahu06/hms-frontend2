@@ -21,7 +21,7 @@ export default function ReadLabAppoinment() {
     useEffect(function () {
 
         function getLabAppoinment() {
-            axios.get("http://localhost:8050/labappoinment/readlabAppoinment").then(function (res) {
+            axios.get("https://backend-of-hms.onrender.com/labappoinment/readlabAppoinment").then(function (res) {
 
                 console.log(res.data);
 
@@ -223,7 +223,7 @@ export default function ReadLabAppoinment() {
                                     height={"50px"}
                                     alt="Snow"
                                     width={"40px"}
-                                    src={`http://localhost:8050/Appoinment_slip/${labAppoinment.file_path}`}
+                                    src={`https://backend-of-hms.onrender.com/Appoinment_slip/${labAppoinment.file_path}`}
                                     style={{ cursor: 'pointer' }}
                                     onClick={imageSrc}
 

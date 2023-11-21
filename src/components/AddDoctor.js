@@ -95,7 +95,7 @@ export default function AddDoctor() {
 
 
 
-        axios.post("http://localhost:8050/doctor/add", formData).then(function () {
+        axios.post("https://backend-of-hms.onrender.com/doctor/add", formData).then(function () {
 
             alert("Success!!");
 

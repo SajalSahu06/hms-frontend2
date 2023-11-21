@@ -43,7 +43,7 @@ export default function PrintDoctort() {
     useEffect(function () {
 
         function getDoctor() {
-            axios.get("http://localhost:8050/doctor/get/" + id).then((res) => {
+            axios.get("https://backend-of-hms.onrender.com/doctor/get/" + id).then((res) => {
 
                 setfirstname(res.data.firstname);
                 setlastname(res.data.lastname);
@@ -139,7 +139,7 @@ export default function PrintDoctort() {
                                     id="myImg"
                                     height={"200px"}
                                     alt="Snow"
-                                    src={`http://localhost:8050/DoctorImage/${file_path}`}
+                                    src={`https://backend-of-hms.onrender.com/DoctorImage/${file_path}`}
                                     style={{ cursor: 'pointer' }}
                                 /></h4>
                             </div>

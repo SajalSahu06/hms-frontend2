@@ -23,7 +23,7 @@ export default function UpdateReport() {
 
     useEffect(() => {
         function getReports() {
-            axios.get("http://localhost:8050/report/get/" + id).then((res) => {
+            axios.get("https://backend-of-hms.onrender.com/report/get/" + id).then((res) => {
                 console.log(res.data);
                 setId(res.data.ID)
                 setName(res.data.name)
@@ -62,7 +62,7 @@ export default function UpdateReport() {
         console.log(UpdateReport)
 
 
-        axios.put("http://localhost:8050/report/update/" + id, UpdateReport).then(function () {
+        axios.put("https://backend-of-hms.onrender.com/report/update/" + id, UpdateReport).then(function () {
             alert("Report data Updated")
             window.location = "/labAllReports";
         }).catch((err) => {

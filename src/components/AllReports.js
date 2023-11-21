@@ -14,7 +14,7 @@ export default function AllReports() {
     //useEffect is helpful for get data from database
     useEffect(() => {
         function getReports() {
-            axios.get("http://localhost:8050/report/").then((res) => {
+            axios.get("https://backend-of-hms.onrender.com/report/").then((res) => {
                 console.log(res.data);
                 setReports(res.data)
             }).catch((err) => {

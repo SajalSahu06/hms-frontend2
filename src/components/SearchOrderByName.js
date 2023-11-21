@@ -55,7 +55,7 @@ export default function AddLabAppoinment() {
         formData.append('status', status);
 
 
-        axios.post("http://localhost:8050/pha/add", formData).then(function () {
+        axios.post("https://backend-of-hms.onrender.com/pha/add", formData).then(function () {
 
             alert("Success!!");
             successModel();

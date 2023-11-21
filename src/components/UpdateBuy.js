@@ -31,7 +31,7 @@ export default function UpdateBuy() {
 
 
         function getLabAppoinment() {
-            axios.get("http://localhost:8050/pha/getonePharmacy/" + id).then((res) => {
+            axios.get("https://backend-of-hms.onrender.com/pha/getonePharmacy/" + id).then((res) => {
 
                 setOrderID(res.data.orderID);
                 setTitle(res.data.title);
@@ -76,7 +76,7 @@ export default function UpdateBuy() {
         }
         console.log(updateLabAppoinment);
 
-        axios.put("http://localhost:8050/pha/update/" + id, updateLabAppoinment).then(function () {
+        axios.put("https://backend-of-hms.onrender.com/pha/update/" + id, updateLabAppoinment).then(function () {
 
             alert("Status Updated");
             navigate("/saerchOrder")

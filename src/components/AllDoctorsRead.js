@@ -25,7 +25,7 @@ export default function AllDoctorsRead() {
     useEffect(function () {
 
         function getdoctors() {
-            axios.get("http://localhost:8050/doctor/").then(function (res) {
+            axios.get("https://backend-of-hms.onrender.com/doctor/").then(function (res) {
 
                 console.log(res.data);
 
@@ -194,7 +194,7 @@ export default function AllDoctorsRead() {
                                     <td>{doctors.previousehospitals}</td>
                                     <td>{doctors.awards}</td>
                                     <td>{doctors.workingdays}</td>
-                                    <td><img src={`http://localhost:8050/DoctorImage/${doctors.file_path}`} style={{ width: "50px", height: "50px" }} /></td>
+                                    <td><img src={`https://backend-of-hms.onrender.com/DoctorImage/${doctors.file_path}`} style={{ width: "50px", height: "50px" }} /></td>
                                     <td><a href={'/updateDoctors/' + doctors._id}><button class="btn btn-sm text-white" style={{ background: "#26CDD1", width: "100px" }}>Update</button></a></td>
                                     <td><a href={'/deleteDoctors/' + doctors._id}><button class="btn btn-sm text-white" style={{ background: "#E53D3D", width: "100px" }}>Delete</button></a></td>
                                     <td><a href={'/NewView/' + doctors._id}><button class="btn btn-sm text-white" style={{ background: "#2F4FAA", width: "100px" }}>View</button></a></td>

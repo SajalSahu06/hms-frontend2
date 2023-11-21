@@ -19,7 +19,7 @@ export default function Login() {
             password: data.get("password"),
         });
 
-        axios.post("http://localhost:8050/auth/login", {
+        axios.post("https://backend-of-hms.onrender.com/auth/login", {
             email: data.get("email"),
             password: data.get("password"),
         }).then(function (res) {

@@ -35,7 +35,7 @@ export default function PrintDoAppoinmentResipt() {
     useEffect(function () {
 
         function getAppoinment() {
-            axios.get("http://localhost:8050/labappoinment/getonelabAppoinment/" + id).then((res) => {
+            axios.get("https://backend-of-hms.onrender.com/labappoinment/getonelabAppoinment/" + id).then((res) => {
 
                 setFirstName(res.data.first_name);
                 setLastName(res.data.last_name);

@@ -28,7 +28,7 @@ export default function ReadTotal() {
     useEffect(function () {
 
         function getreadTotal() {
-            axios.get("http://localhost:8050/upd/").then(function (res) {
+            axios.get("https://backend-of-hms.onrender.com/upd/").then(function (res) {
 
                 console.log(res.data);
 

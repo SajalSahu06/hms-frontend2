@@ -14,7 +14,7 @@ export default function UpdateCustomer() {
     const [message, setMes] = useState('')
 
     useEffect(() => {
-        axios.get(`http://localhost:8050/customer/get/${id}`).then((res) => {
+        axios.get(`https://backend-of-hms.onrender.com/customer/get/${id}`).then((res) => {
             setName(res.data.name)
             setAge(res.data.age)
             setGender(res.data.gender)

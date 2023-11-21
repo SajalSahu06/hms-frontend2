@@ -61,7 +61,7 @@ export default function AddAppoinment() {
 
 
 
-            axios.post("http://localhost:8050/appoinment/addAppoinment", formData).then(function () {
+            axios.post("https://backend-of-hms.onrender.com/appoinment/addAppoinment", formData).then(function () {
 
                 //alert("Student Add");
                 successModel();
@@ -93,7 +93,7 @@ export default function AddAppoinment() {
     useEffect(function () {
 
         function getAppoinment() {
-            axios.get("http://localhost:8050/doctor/readDoctor").then(function (res) {
+            axios.get("https://backend-of-hms.onrender.com/doctor/readDoctor").then(function (res) {
 
                 console.log(res.data);
 

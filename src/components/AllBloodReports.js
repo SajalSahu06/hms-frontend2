@@ -54,7 +54,7 @@ export default function AllBloodReports() {
 
     useEffect(() => {
         function getBloodReports() {
-            axios.get("http://localhost:8050/bloodreport/blood").then((res) => {
+            axios.get("https://backend-of-hms.onrender.com/bloodreport/blood").then((res) => {
                 console.log(res.data);
                 setBloodReports(res.data)
             }).catch((err) => {

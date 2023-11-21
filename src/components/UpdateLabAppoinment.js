@@ -31,7 +31,7 @@ export default function UpdateLabAppoinment() {
     useEffect(function () {
 
         function getLabAppoinment() {
-            axios.get("http://localhost:8050/labappoinment/getonelabAppoinment/" + id).then((res) => {
+            axios.get("https://backend-of-hms.onrender.com/labappoinment/getonelabAppoinment/" + id).then((res) => {
 
                 setFirstName(res.data.first_name);
                 setLastName(res.data.last_name);
@@ -96,7 +96,7 @@ export default function UpdateLabAppoinment() {
         }
         console.log(updateLabAppoinment);
 
-        axios.put("http://localhost:8050/labappoinment/updatelabAppoinment/" + id, updateLabAppoinment).then(function () {
+        axios.put("https://backend-of-hms.onrender.com/labappoinment/updatelabAppoinment/" + id, updateLabAppoinment).then(function () {
 
             alert("Status Updated");
             successModel();

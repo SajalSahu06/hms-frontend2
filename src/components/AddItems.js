@@ -101,7 +101,7 @@ export default function AddBloodReport() {
             return false;
         }
 
-        axios.post("http://localhost:8050/labitemsinventory/addItem ", newBloodReport).then(function () {
+        axios.post("https://backend-of-hms.onrender.com/labitemsinventory/addItem ", newBloodReport).then(function () {
             alert("data Inserted")
             window.location = "/item";
         }).catch((err) => {

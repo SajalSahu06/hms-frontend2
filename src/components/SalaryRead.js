@@ -25,7 +25,7 @@ export default function SalaryRead() {
     useEffect(function SalaryRead() {
 
         function getsalary() {
-            axios.get("http://localhost:8050/salary/salary").then(function (res) {
+            axios.get("https://backend-of-hms.onrender.com/salary/salary").then(function (res) {
 
                 console.log(res.data);
 

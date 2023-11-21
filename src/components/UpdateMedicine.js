@@ -23,7 +23,7 @@ export default function UpdateBuy() {
 
 
         function getMedicine() {
-            axios.get("http://localhost:8050/med/getNewMedicine/" + id).then((res) => {
+            axios.get("https://backend-of-hms.onrender.com/med/getNewMedicine/" + id).then((res) => {
 
                 setmName(res.data.mName);
                 setuPrice(res.data.uPrice);
@@ -54,7 +54,7 @@ export default function UpdateBuy() {
         }
         console.log(updateMedicine);
 
-        axios.put("http://localhost:8050/med/update/" + id, updateMedicine).then(function () {
+        axios.put("https://backend-of-hms.onrender.com/med/update/" + id, updateMedicine).then(function () {
 
             alert("Updated");
 

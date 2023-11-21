@@ -34,7 +34,7 @@ export default function UpdateDoctor() {
     useEffect(function () {
 
         function getDoctor() {
-            axios.get("http://localhost:8050/doctor/get/" + id).then((res) => {
+            axios.get("https://backend-of-hms.onrender.com/doctor/get/" + id).then((res) => {
 
                 setfirstname(res.data.firstname);
                 setlastname(res.data.lastname);
@@ -151,7 +151,7 @@ export default function UpdateDoctor() {
 
                                                         </tr>
 
-                                                        <center><img height={"200px"} width={"200px"} className="rounded-circle" src={`http://localhost:8050/DoctorImage/${file_path}`} style={{ borderRadius: "200pxm k" }} /></center><br></br><br></br>
+                                                        <center><img height={"200px"} width={"200px"} className="rounded-circle" src={`https://backend-of-hms.onrender.com/DoctorImage/${file_path}`} style={{ borderRadius: "200pxm k" }} /></center><br></br><br></br>
                                                         <tr >
 
                                                             <td className="col-md-8"><b className="text-black">firstname:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{firstname}</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b className="text2"></b></td>

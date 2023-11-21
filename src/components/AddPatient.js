@@ -129,7 +129,7 @@ export default function AddPatient() {
         patient.append("file_path", file_path);
         patient.append("password", password);
 
-        axios.post("http://localhost:8050/patient/add", patient).then(function () {
+        axios.post("https://backend-of-hms.onrender.com/patient/add", patient).then(function () {
             alert("Patient Added!");
             navigate(-1)
         })

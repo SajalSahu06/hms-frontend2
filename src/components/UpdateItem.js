@@ -33,7 +33,7 @@ export default function UpdateItem() {
 
     useEffect(() => {
         function getItems() {
-            axios.get("http://localhost:8050/labitemsinventory/getItem/" + id).then((res) => {
+            axios.get("https://backend-of-hms.onrender.com/labitemsinventory/getItem/" + id).then((res) => {
                 console.log(res.data);
                 setitemID(res.data.itemID)
                 setitemname(res.data.itemname)
@@ -63,7 +63,7 @@ export default function UpdateItem() {
         console.log(UpdateItems)
 
 
-        axios.put("http://localhost:8050/labitemsinventory/updateItem/" + id, UpdateItems).then(function () {
+        axios.put("https://backend-of-hms.onrender.com/labitemsinventory/updateItem/" + id, UpdateItems).then(function () {
             alert("Inventory data Updated")
             window.location = "/item";
         }).catch((err) => {

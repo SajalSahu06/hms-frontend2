@@ -20,7 +20,7 @@ export default function ReadAppoinment() {
     useEffect(function () {
 
         function getAppoinment() {
-            axios.get("http://localhost:8050/appoinment/readAppoinment").then(function (res) {
+            axios.get("https://backend-of-hms.onrender.com/appoinment/readAppoinment").then(function (res) {
 
                 console.log(res.data);
 
@@ -40,7 +40,7 @@ export default function ReadAppoinment() {
 
 
         function getLabAppoinment() {
-            axios.get("http://localhost:8050/labappoinment/readlabAppoinment").then(function (res) {
+            axios.get("https://backend-of-hms.onrender.com/labappoinment/readlabAppoinment").then(function (res) {
 
                 console.log(res.data);
 
