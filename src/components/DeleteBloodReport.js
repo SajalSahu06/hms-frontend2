@@ -9,7 +9,7 @@ export default function DeleteBloodReport() {
 
     const { id } = useParams();
     function getBloodReports() {
-        axios.delete("http://localhost:8050/bloodreport/deleteBlood/" + id).then(function () {
+        axios.delete("https://backend-of-hms.onrender.com/bloodreport/deleteBlood/" + id).then(function () {
             toast.success("Blood Report details deleted", { theme: 'colored' });
             alert("Blood report details deleted")
             window.location = "/blood";

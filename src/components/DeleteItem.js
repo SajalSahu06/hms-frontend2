@@ -5,7 +5,7 @@ export default function DeleteItem() {
 
     const { id } = useParams();
     function getItems() {
-        axios.delete("http://localhost:8050/labitemsinventory/deleteItem/" + id).then(function () {
+        axios.delete("https://backend-of-hms.onrender.com/labitemsinventory/deleteItem/" + id).then(function () {
             //alert(" data deleted")
             window.location = "/item";
         }).catch((err) => {

@@ -220,7 +220,7 @@ export default function AddBloodReport() {
             status
         }
 
-        axios.post("http://localhost:8050/bloodreport/addBlood", newBloodReport).then(function () {
+        axios.post("https://backend-of-hms.onrender.com/bloodreport/addBlood", newBloodReport).then(function () {
             alert("data Inserted")
             window.location = "/blood";
         }).catch((err) => {

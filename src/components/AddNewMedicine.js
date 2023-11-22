@@ -21,7 +21,7 @@ export default function AddNewMedicine() {
         formData.append("qty", qty);
 
 
-        axios.post("http://localhost:8050/med/add", formData).then(function () {
+        axios.post("https://backend-of-hms.onrender.com/med/add", formData).then(function () {
             alert("Success!!");
             navigate("/readMedicine"); // navigate to medicine page after successful addition of medicine
         })

@@ -74,7 +74,7 @@ export default function AddLabAppoinment() {
             formData.append('appNo', appNo);
             formData.append('appTime', appTime);
 
-            axios.post("http://localhost:8050/labappoinment/addLabAppoinment", formData).then(function () {
+            axios.post("https://backend-of-hms.onrender.com/labappoinment/addLabAppoinment", formData).then(function () {
 
                 //alert("LabAppoinment Add");
                 successModel();
@@ -103,7 +103,7 @@ export default function AddLabAppoinment() {
     useEffect(function () {
 
         function getLabAppoinmentDetails() {
-            axios.get("http://localhost:8050/labappoinment/readlabAppoinment").then(function (res) {
+            axios.get("https://backend-of-hms.onrender.com/labappoinment/readlabAppoinment").then(function (res) {
 
                 console.log(res.data);
                 setAppoinmentDetails(res.data);

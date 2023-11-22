@@ -15,7 +15,7 @@ export default function DeleteEmployee() {
             function getAppoinment() {
 
 
-                axios.delete("http://localhost:8050/appoinment/deleteAppoinment/" + id).then(function (res) {
+                axios.delete("https://backend-of-hms.onrender.com/appoinment/deleteAppoinment/" + id).then(function (res) {
                     log.current = false;
                     alert("Delete Successfull");
                     navigate("/readAppoinment")

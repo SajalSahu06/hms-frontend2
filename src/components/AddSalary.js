@@ -44,7 +44,7 @@ export default function AddSalary() {
         }
         console.log(newSalary)
 
-        axios.post("http://localhost:8050/salary/addsalary", newSalary).then(function () {
+        axios.post("https://backend-of-hms.onrender.com/salary/addsalary", newSalary).then(function () {
 
             alert("Success!!");
 

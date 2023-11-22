@@ -16,7 +16,7 @@ export default function DeletePatient() {
 
 
 
-            axios.delete("http://localhost:8050/patient/delete/" + id).then(function (res) {
+            axios.delete("https://backend-of-hms.onrender.com/patient/delete/" + id).then(function (res) {
                 //log.current = false;
                 alert("Delete Successfull");
                 if (localStorage.getItem("role") === "user") {

@@ -15,7 +15,7 @@ export default function DeleteLabAppoinment() {
             function DeleteLabAppoinment() {
 
 
-                axios.delete("http://localhost:8050/pha/delete/" + id).then(function (res) {
+                axios.delete("https://backend-of-hms.onrender.com/pha/delete/" + id).then(function (res) {
                     //log.current = false;
                     alert("Delete Successfull");
                     navigate("/readPrescriptionAdmin");

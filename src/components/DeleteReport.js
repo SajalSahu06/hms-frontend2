@@ -9,7 +9,7 @@ export default function DeleteReport() {
 
     const { id } = useParams();
     function getReports() {
-        axios.delete("http://localhost:8050/report/delete/" + id).then(function () {
+        axios.delete("https://backend-of-hms.onrender.com/report/delete/" + id).then(function () {
             alert(" data deleted")
             window.location = "/labAllReports";
         }).catch((err) => {

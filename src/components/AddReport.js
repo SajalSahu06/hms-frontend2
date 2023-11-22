@@ -129,7 +129,7 @@ export default function AddReport() {
         formData.append('status', status);
         formData.append('filepath', filepath);
 
-        axios.post("http://localhost:8050/report/add", formData).then(function () {
+        axios.post("https://backend-of-hms.onrender.com/report/add", formData).then(function () {
             alert("data Inserted")
             window.location = "/labAllReports";
         }).catch((err) => {

@@ -25,7 +25,7 @@ export default function ReadBuy() {
     useEffect(function () {
 
         function getreadPrescriptions() {
-            axios.get("http://localhost:8050/pha/").then(function (res) {
+            axios.get("https://backend-of-hms.onrender.com/pha/").then(function (res) {
 
                 console.log(res.data);
 
@@ -53,7 +53,7 @@ export default function ReadBuy() {
 
     const downloadImage = () => {
         const link = document.createElement("a");
-        link.download = `http://localhost:8050/Prescriptions/${readPrescription.prescription}`;
+        link.download = `https://backend-of-hms.onrender.com/Prescriptions/${readPrescription.prescription}`;
         link.href = src;
         document.body.appendChild(link);
         link.click();
@@ -162,7 +162,7 @@ export default function ReadBuy() {
                                                 height={"50px"}
                                                 alt="Snow"
                                                 width={"50px"}
-                                                src={`http://localhost:8050/Prescriptions/${readPrescription.prescription}`}
+                                                src={`https://backend-of-hms.onrender.com/Prescriptions/${readPrescription.prescription}`}
                                                 style={{ cursor: 'pointer' }}
                                                 onClick={imageSrc}
 
