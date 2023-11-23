@@ -187,7 +187,7 @@ export default function ReadBuy() {
                 <div class="row d-flex justify-content-center">
 
 
-                    <button type="submit" className="btn btn-success col-md-4 mt-0 mt-md-0" onClick={() => navigate("/readTotal/")} style={{backgroundColor:"#f0655b"}}>View Total & Pay</button><br />
+                    {/* <button type="submit" className="btn btn-success col-md-4 mt-0 mt-md-0" onClick={() => navigate("/readTotal/")} style={{backgroundColor:"#f0655b"}}>View Total & Pay</button><br /> */}
 
                 </div><br />
 
