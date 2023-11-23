@@ -98,11 +98,6 @@ export default function AddLabAppoinment() {
         return re.test(email);
     }
 
-    function validatePhoneNumber(telephone) {
-        var regex = /^(?:\+94|0)[78]\d{8}$/;
-        return regex.test(telephone);
-    }
-
 
 
 
@@ -161,17 +156,6 @@ export default function AddLabAppoinment() {
             setEmailError("");
         }
 
-        let telephone = document.forms["Addform"]["telephone"].value;
-        if (!validatePhoneNumber(telephone)) {
-
-            //alert("Please enter a valid Sri Lankan mobile number");
-            setTelephoneError("Please enter a valid mobile number");
-            return false;
-        } else {
-
-            setTelephoneError("");
-
-        }
 
 
         let town = document.forms["Addform"]["town"].value;
@@ -285,7 +269,7 @@ export default function AddLabAppoinment() {
 
                         <div className="form-group col-md-6 mt-3 mt-md-0">
                             <label for="telephone"><b>Telephone</b></label>
-                            <input name="telephone" type="text" className="form-control" id="telephone" placeholder="07XXXXXXXXX" onChange={function (e) { setTelephone(e.target.value); }} required />
+                            <input name="telephone" type="text" className="form-control" id="telephone" placeholder="XXXXXXXXXX" onChange={function (e) { setTelephone(e.target.value); }} required />
                             {telephoneError && <span className="error" style={{ color: "red" }}>{telephoneError}</span>}
 
                         </div><br />
