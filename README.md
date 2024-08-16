@@ -30,18 +30,23 @@ A comprehensive Hospital Management System developed using the MERN Stack (Mongo
 
 
 
-** Screenshots **
+## Screenshots
+
+### Landing Page:
+![Landing Page](documentationResources/LandingPage.png)
+
+### Sign-In Page:
+![Sign-In Page](documentationResources/SignIn.png)
+
+### Patient Dashboard:
+![Patient Dashboard](documentationResources/dashboard.png)
+
+### Appointment Scheduling:
+![Appointment Scheduling](documentationResources/Appointment.png)
 
 
-Landing Page:
 
-Sign-In Page:
 
-Patient Dashboard:
-
-Appointment Scheduling:
-
-Medical Records:
 
 ## Developed With
 
