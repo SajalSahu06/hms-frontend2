@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+# HOSPITAL-MANAGEMENT-SYSTEM
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+A comprehensive Hospital Management System developed using the MERN Stack (MongoDB, Express.js, React.js, Node.js). This application streamlines the management of hospital operations, including patient registration, appointment scheduling, staff management, and more.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+### Front-End
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Sign-In & Sign-Up Pages: Secure user authentication using JWT tokens.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Role-Based Access Control: Different user roles like Admin, Doctor, and Patient with specific permissions.
 
-### `npm test`
+* Patient Dashboard: Displays patient information, medical history, appointments, and billing details.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Doctor Dashboard: Allows doctors to manage their appointments, view patient records, and update treatment plans.
 
-### `npm run build`
+* Appointment Scheduling: Patients can book, view, and manage appointments with available doctors.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+*Medical Records Management: Doctors can add, view, and update patient medical records.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+*Responsive Design: Optimized for both desktop and mobile devices.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Back-End
 
-### `npm run eject`
+* Express.js: Manages server-side operations and API routes.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+*  MongoDB Atlas: Stores patient records, appointments, and user data in a scalable, cloud-based database.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+** Screenshots **
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Landing Page:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Sign-In Page:
 
-### Code Splitting
+Patient Dashboard:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Appointment Scheduling:
 
-### Analyzing the Bundle Size
+Medical Records:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Developed With
 
-### Making a Progressive Web App
+* [Visual Studio Code](https://code.visualstudio.com/) - A source code editor developed by Microsoft for Windows, Linux and macOS. It includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring
+* [Node.js](https://nodejs.org/en/) - Javascript runtime
+* [React](https://reactjs.org/) - A javascript library for building user interfaces
+* [Babel](https://babeljs.io/) - A transpiler for javascript
+* [Webpack](https://webpack.js.org/) - A module bundler
+* [SCSS](http://sass-lang.com/) - A css metalanguage
+* [Bootstrap 4](https://getbootstrap.com/) - Bootstrap is an open source toolkit for developing with HTML, CSS, and JS
+* [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
+* [Express js](http://expressjs.com/) - Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+* [MongoDB atlas](https://www.mongodb.com/cloud/atlas) - MongoDB Atlas is the global cloud database service for modern applications.
+* [Passport Js](http://www.passportjs.org/) - Passport is authentication middleware for Node.js. Extremely flexible and modular, Passport can be unobtrusively dropped in to any Express-based web application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Prerequisites
 
-### Advanced Configuration
+Ensure that you have the following software installed on your system:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Node.js 14.x or higher
+npm 6.x or higher
+You can verify the versions using the following commands:
 
-### Deployment
+Type the following commands in the terminal to verify your node and npm versions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+node -v
+npm -v
+```
 
-### `npm run build` fails to minify
+### Install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Follow the following steps to get development environment running.
+
+* Clone _'MERN-BUS-APP.git'_ repository from GitHub
+
+  ```bash
+  git clone https://github.com/AdityaKumawat97/MERN-BUS-APP.git
+  ```
+
+   _OR USING SSH_
+
+  ```bash
+  git clone git@github.com:AdityaKumawat97/MERN-BUS-APP.git
+  ```
+
+* Install node modules
+
+   ```bash
+   cd MERN-BUS-APP
+   cd frontend
+   npm install
+   cd..
+   cd backend
+   npm install
+   ```
+
+
+### Starting both front end and back end servers
+
+* Build application
+
+  This command will start the mongodb and the front end part.
+
+  ```bash
+  cd frontend
+  npm start
+  cd..
+  cd backend
+  npm run devStart
+  ```
+
+
+---
+
