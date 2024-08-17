@@ -84,24 +84,23 @@ Follow the following steps to get development environment running.
 * Clone _'MERN-BUS-APP.git'_ repository from GitHub
 
   ```bash
-  git clone https://github.com/AdityaKumawat97/MERN-BUS-APP.git
+  git clone [https://github.com/SajalSahu06/hms-frontend2.git]
   ```
 
    _OR USING SSH_
 
   ```bash
-  git clone git@github.com:AdityaKumawat97/MERN-BUS-APP.git
+  git clone git@github.com:SajalSahu06/hms-frontend2.git
+    
   ```
 
 * Install node modules
 
    ```bash
-   cd MERN-BUS-APP
+   cd hms-frontend2
    cd frontend
    npm install
-   cd..
-   cd backend
-   npm install
+
    ```
 
 
@@ -115,8 +114,7 @@ Follow the following steps to get development environment running.
   cd frontend
   npm start
   cd..
-  cd backend
-  npm run devStart
+ 
   ```
 
 
